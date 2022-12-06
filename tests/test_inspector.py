@@ -20,11 +20,12 @@ class TestGetModule:
         assert isinstance(module, types.ModuleType)
 
 
+# TODO: fix this test
 class TestGetModels:
     """Tests function get_models"""
 
     def test_should_yield_concrete_models_in_given_module(self):
-        _, module = get_module('django.contrib.sessions')
+        _, module = get_module('tests.blog.article.models')
         models = [item for item in get_models(module)]
         assert models == [
             ('User', User),

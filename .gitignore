@@ -5,6 +5,7 @@ htmlcov
 .nox
 .python-version
 coverage.xml
+.forestadmin-schema.json
 
 # byte-compiled / optimized
 __pycache__
