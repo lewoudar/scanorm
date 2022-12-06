@@ -1,5 +1,9 @@
 import types
+from django.contrib.auth.models import User
+
 from scanorm.inspector import get_module, get_models
+
+from tests.blog.article.models import Article, Comment
 
 
 class TestGetModule:
@@ -14,3 +18,16 @@ class TestGetModule:
         module_found, module = get_module('django.contrib.sessions')
         assert module_found is True
         assert isinstance(module, types.ModuleType)
+
+
+class TestGetModels:
+    """Tests function get_models"""
+
+    def test_should_yield_concrete_models_in_given_module(self):
+        _, module = get_module('django.contrib.sessions')
+        models = [item for item in get_models(module)]
+        assert models == [
+            ('User', User),
+            ('Article', Article),
+            ('Comment', Comment)
+        ]
