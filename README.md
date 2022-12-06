@@ -6,12 +6,19 @@ the root directory with all the models discovered in the project.
 ## Installation
 
 This library works with python version >=3.9 and Django version >= 4.X.
+You can install the library like a git repository, for example:
+
+```shell
+$ pip install git+https://github.com/lewoudar/scanorm.git
+# or if you use poetry
+$ poetry add git+https://github.com/lewoudar/scanorm.git
+```
 
 ## Usage
 
 Declare the app `scanorm` in `INSTALLED_APPS`.
 
-The file will have the following form:
+The result file will have the following form:
 
 ```json
 {
@@ -41,3 +48,8 @@ The file will have the following form:
 
 When an app does not have models or the library can't detect them, the value will be None. Otherwise, you will have
 for each app, a dictionary of models, and for each model its list of fields with its type.
+
+
+## Todo
+- Improve testing
+- More details on fields?

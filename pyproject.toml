@@ -1,9 +1,23 @@
 [tool.poetry]
 name = "scanorm"
 version = "0.1.0"
-description = ""
+description = "A django package which scans a project and creates a schema with all models encountered"
 authors = ["le_woudar <rollandkev@yahoo.fr>"]
 readme = "README.md"
+license = "Apache-2.0"
+keywords = ["django", "orm", "schema"]
+
+packages = [
+    { include = "scanorm" }
+]
+
+classifiers = [
+    "Intended Audience :: Developers",
+    "Environment :: Web Environment",
+    "Operating System :: OS Independent",
+    "Framework :: Django",
+    "Framework :: Django :: 4"
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
