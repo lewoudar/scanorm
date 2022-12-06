@@ -49,6 +49,10 @@ The result file will have the following form:
 When an app does not have models or the library can't detect them, the value will be None. Otherwise, you will have
 for each app, a dictionary of models, and for each model its list of fields with its type.
 
+## Estimated time
+
+It took my Sunday and a bit of Monday / Tuesday to have this first version.
+
 
 ## Todo
 - Improve testing
