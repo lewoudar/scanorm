@@ -1,8 +1,8 @@
 import types
+
 from django.contrib.auth.models import User
 
-from scanorm.inspector import get_module, get_models
-
+from scanorm.inspector import get_models, get_module
 from tests.blog.article.models import Article, Comment
 
 
@@ -27,8 +27,4 @@ class TestGetModels:
     def test_should_yield_concrete_models_in_given_module(self):
         _, module = get_module('tests.blog.article.models')
         models = [item for item in get_models(module)]
-        assert models == [
-            ('User', User),
-            ('Article', Article),
-            ('Comment', Comment)
-        ]
+        assert models == [('User', User), ('Article', Article), ('Comment', Comment)]

@@ -9,7 +9,7 @@ This library works with python version >=3.9 and Django version >= 4.X.
 
 ## Usage
 
-Declare the app in `INSTALLED_APPS`
+Declare the app `scanorm` in `INSTALLED_APPS`.
 
 The file will have the following form:
 

@@ -1,12 +1,12 @@
 import importlib
+import inspect
 import json
 import types
-import inspect
 from pathlib import Path
-from typing import Optional, Type, Iterator
+from typing import Iterator, Optional, Type
 
-from django.db import models
 from django.conf import settings
+from django.db import models
 from django.db.models.fields import Field
 
 
